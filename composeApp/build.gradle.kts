@@ -39,6 +39,12 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+
+            implementation(libs.navigator)
+            implementation(libs.navigator.screenmodel)
+            implementation(libs.navigator.transitions)
+            implementation(libs.navigator.koin)
+            implementation(libs.koin.core)
         }
     }
 }
