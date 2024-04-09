@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
+    alias(libs.plugins.realm.plugin)
 }
 
 kotlin {
@@ -45,6 +46,10 @@ kotlin {
             implementation(libs.navigator.transitions)
             implementation(libs.navigator.koin)
             implementation(libs.koin.core)
+
+            implementation(libs.mongodb.realm)
+            implementation(libs.kotlin.coroutines)
+            implementation(libs.stately.common)
         }
     }
 }
@@ -83,3 +88,4 @@ android {
     }
 }
 
+task("testClasses") {}
